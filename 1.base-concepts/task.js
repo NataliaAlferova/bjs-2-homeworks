@@ -22,16 +22,22 @@ function solveEquation(a, b, c) {
 
 
 
-
-
-
-
-
-
 // function calculateTotalMortgage(percent, contribution, amount, date) {
 //   let totalAmount;
 
-//   // код для задачи №2 писать здесь
+//   let credit = amount - contribution;
+//   let monthPercent = percent/12;
 
+//   let Data = new Date();
+//   let jearsToEnd = (Number(date.slice(-4)) - Data.getFullYear());
+//   let monthToEnd = jearsToEnd * 12 + ((Number(date.slice(3,5))) - (Data.getMonth() + 1));
+
+//   let monthAmount = credit * (monthPercent + (monthPercent / (((1 + monthPercent)^monthToEnd) - 1)));
+
+//   totalAmount = Number((monthAmount * monthToEnd).toFixed(2));
+
+
+
+//   console.log(totalAmount);
 //   return totalAmount;
 // }

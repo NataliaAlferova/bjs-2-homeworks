@@ -2,17 +2,15 @@
 
 function solveEquation(a, b, c) {
   let result = [];
-  let D = Math.pow(b, 2) - 4 * a * c;
+  let d = Math.pow(b, 2) - 4 * a * c;
 
-  if (D > 0) {
-    result.push ((-b + Math.sqrt(D)) / (2 * a));
-    result.push ((-b - Math.sqrt(D)) / (2 * a));
-    return result;
+  if (d > 0) {
+    result.push((-b + Math.sqrt(d)) / (2 * a));
+    result.push((-b - Math.sqrt(d)) / (2 * a));
   }
 
-  if (D == 0) {
-    result.push (-b / (2 * a));
-    return result;
+  if (d == 0) {
+    result.push(-b / (2 * a));
   }
 
   return result;

@@ -33,9 +33,20 @@ function getArrayParams(numbers){
   return result;
 }
 
+
 // Задание 2
 
 let arrOfArr = [];
+
+function makeWork(arrOfArr, func) {
+  let max = -Infinity;
+  for (let array of arrOfArr) {
+    if (func(array) > max) {
+      max = func(array);
+    }
+  }
+  return max;
+}
 
 function worker(array) {
   let sum = 0;
@@ -45,15 +56,7 @@ function worker(array) {
   return sum;
 }
 
-function makeWork(arrOfArr, worker) {
-  let max = -Infinity;
-  for (let array of arrOfArr) {
-    if (worker(array) > max) {
-      max = worker(array);
-    }
-  }
-  return max;
-}
+makeWork(arrOfArr, worker);
 
 
 // Задание 3
@@ -74,12 +77,4 @@ function worker2(array) {
   return diff;
 }
 
-function makeWork(arrOfArr, worker2) {
-  let max = -Infinity;
-  for (let array of arrOfArr) {
-    if (worker2(array) > max) {
-      max = worker2(array);
-    }
-  }
-  return max;
-}
+makeWork(arrOfArr, worker2);

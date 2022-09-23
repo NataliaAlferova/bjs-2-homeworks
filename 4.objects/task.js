@@ -24,12 +24,12 @@ Student.prototype.addMarks = function(...marks){
   if(this.marks === undefined){ 
     this.marks = marks;
   } else {
-    this.marks = [...this.marks, ...marks];
+    this.marks.push = [...marks];
   }
 }
 
 Student.prototype.getAverage = function(){
-  this.average = this.marks.reduce((sum, mark) => sum + mark) / this.marks.length;
+  return (this.marks.reduce((sum, mark) => sum + mark) / this.marks.length);
 }
 
 Student.prototype.exclude = function(reason){
